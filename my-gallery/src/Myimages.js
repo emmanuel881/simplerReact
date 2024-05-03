@@ -1,24 +1,12 @@
-const Myimages = () => {
+const Myimages = ({ images }) => {
   return (
     <div className="container">
-      <div className="box">
-        <img src="" alt="image" />
-        <img src="" alt="image" />
-        <img src="" alt="image" />
-        <img src="" alt="image" />
-      </div>
-      <div className="box">
-        <img src="" alt="image" />
-        <img src="" alt="image" />
-        <img src="" alt="image" />
-        <img src="" alt="image" />
-      </div>
-      <div className="box">
-        <img src="" alt="image" />
-        <img src="" alt="image" />
-        <img src="" alt="image" />
-        <img src="" alt="image" />
-      </div>
+      {images.map((image) => (
+        <div className="box" key={image.id}>
+          <p>{image.id}</p>
+          <button>Add to favorites</button>
+        </div>
+      ))}
     </div>
   );
 };
