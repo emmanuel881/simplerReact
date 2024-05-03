@@ -4,7 +4,7 @@ const Navbar = () => {
       <h1>Gallery</h1>
       <div className="links">
         <a href="/">Home</a>
-        <a href="/liked">Favorites</a>
+        <a href="/Favorites">Favorites</a>
         <a
           href="/upload"
           style={{
