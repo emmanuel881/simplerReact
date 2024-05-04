@@ -14,7 +14,7 @@ const Favorites = () => {
       <div className="container">
         {images &&
           images.map((image) =>
-            image.fav === "true" ? (
+            image.fav === true ? (
               <div className="box" key={image.id}>
                 <p>{image.id}</p>
                 <button

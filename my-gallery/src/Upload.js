@@ -1,26 +1,48 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const Upload = () => {
+  const history = useHistory();
   //image url
-  const [selectImage, setSelectImage] = useState(null);
+  const [url, setUrl] = useState(null);
   //select data
   const [description, setDescription] = useState("none");
+
+  //loading button
+  const [isPending, setIsPending] = useState(false);
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
 
     //check if file is an image
     if (file && file.type.startsWith("image/")) {
-      setSelectImage(URL.createObjectURL(file));
+      setUrl(URL.createObjectURL(file));
     } else {
-      setSelectImage(null);
+      setUrl(null);
       alert("please select an image");
     }
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const fav = false;
+    setIsPending(true);
+    const imageUpload = { url, description, fav };
+    console.log(imageUpload);
+
+    fetch("http://localhost:8000/images", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(imageUpload),
+    }).then(() => {
+      setIsPending(false);
+      alert("upload complete");
+      history.push("/");
+    });
   };
   return (
     <div className="upload">
       <h1>Add image</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>name</label>
         <select
           value={description}
@@ -39,7 +61,17 @@ const Upload = () => {
           onChange={handleImageChange}
           required
         />
-        <button>Upload</button>
+        {!isPending && <button>Upload</button>}
+        {isPending && (
+          <button
+            disabled
+            style={{
+              backgroundColor: "#e83336",
+            }}
+          >
+            Uploading ...
+          </button>
+        )}
       </form>
     </div>
   );

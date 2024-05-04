@@ -2,157 +2,171 @@
   "images": [
     {
       "id": 1,
-      "name": "Image 1",
       "url": "../images/car1.jpg",
       "description": "car",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 2,
-      "name": "Image 2",
       "url": "../images/cat1.jpg",
       "description": "cat",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 3,
-      "name": "Image 3",
       "url": "../images/dog1.jpg",
       "description": "dog",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 4,
-      "name": "Image 3",
       "url": "../images/guitar4.jpg",
       "description": "guitar",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 5,
-      "name": "Image 3",
       "url": "../images/car2.jpg",
       "description": "car",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 6,
-      "name": "Image 3",
       "url": "../images/dog2.jpg",
       "description": "dog",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 7,
-      "name": "Image 3",
       "url": "../images/girl1.jpg",
       "description": "girl",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 8,
-      "name": "Image 3",
       "url": "../images/car3.jpg",
       "description": "car",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 9,
-      "name": "Image 3",
       "url": "../images/car4.jpg",
       "description": "car",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 10,
-      "name": "Image 3",
       "url": "../images/car5.jpg",
       "description": "car",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 11,
-      "name": "Image 3",
       "url": "../images/car6.jpg",
       "description": "car",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 12,
-      "name": "Image 3",
       "url": "../images/car7.jpg",
       "description": "car",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 13,
-      "name": "Image 3",
       "url": "../images/cat2.jpg",
       "description": "cat",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 14,
-      "name": "Image 3",
       "url": "../images/cat3.jpg",
       "description": "cat",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 15,
-      "name": "Image 3",
       "url": "../images/cat4.jpg",
       "description": "cat",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 16,
-      "name": "Image 3",
       "url": "../images/dog2.jpg",
       "description": "dog",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 17,
-      "name": "Image 3",
       "url": "../images/dog3.jpg",
       "description": "dog",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 18,
-      "name": "Image 3",
       "url": "../images/dog4.jpg",
       "description": "Description of Image 3",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 19,
-      "name": "Image 3",
       "url": "../images/girl2.jpg",
       "description": "girl",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 20,
-      "name": "Image 3",
       "url": "../images/girl3.jpg",
       "description": "girl",
-      "fav": "false"
+      "fav": false
     },
     {
       "id": 21,
-      "name": "Image 3",
       "url": "../images/guitar2.jpg",
       "description": "guitar",
-      "fav": "true"
+      "fav": false
     },
     {
       "id": 22,
-      "name": "Image 3",
       "url": "../images/guitar4.jpg",
       "description": "guitar",
-      "fav": "false"
+      "fav": false
+    },
+    {
+      "url": "blob:http://localhost:3000/f5e7a31a-55c5-45b1-ac3f-cfd8cd6fb91e",
+      "description": "car",
+      "fav": false,
+      "id": 23
+    },
+    {
+      "url": "blob:http://localhost:3000/0b831777-70a4-470b-9bf9-71f735188ac7",
+      "description": "dog",
+      "fav": true,
+      "id": 24
+    },
+    {
+      "url": "blob:http://localhost:3000/d4b53591-1b91-4fd3-9f65-b7c7e15920e6",
+      "description": "girl",
+      "fav": false,
+      "id": 25
+    },
+    {
+      "url": "blob:http://localhost:3000/d5fe302d-9dc7-4642-a05d-c905b055b27c",
+      "description": "cat",
+      "fav": false,
+      "id": 26
+    },
+    {
+      "url": "blob:http://localhost:3000/d5fe302d-9dc7-4642-a05d-c905b055b27c",
+      "description": "dog",
+      "fav": false,
+      "id": 27
+    },
+    {
+      "url": "blob:http://localhost:3000/52a90ad8-4f8e-4ce5-9f2b-64984afe4ff2",
+      "description": "car",
+      "fav": false,
+      "id": 28
     }
   ]
 }
