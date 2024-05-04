@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Myimages from "./Myimages";
 import useFetch from "./useFetch";
 

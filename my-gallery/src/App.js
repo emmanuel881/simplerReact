@@ -6,6 +6,7 @@ import {
   Switch,
 } from "react-router-dom/cjs/react-router-dom.min";
 import Favorites from "./Favorites";
+import Upload from "./Upload";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
             </Route>
             <Route exact path="/Favorites">
               <Favorites />
+            </Route>
+            <Route exact path="Upload">
+              <Upload />
             </Route>
           </Switch>
         </div>
