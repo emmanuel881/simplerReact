@@ -1,10 +1,8 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import useFetch from "./useFetch";
 import axios from "axios";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const Favorites = () => {
-  const history = useHistory();
   const {
     data: images,
     error,
@@ -18,7 +16,7 @@ const Favorites = () => {
       await axios.patch(resource, updatedData);
 
       console.log("Removed from favorite list");
-      history.push("Upload");
+      window.location.reload();
     } catch (error) {
       console.log("Error updating JSON file: ", error);
     }

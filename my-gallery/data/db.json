@@ -4,7 +4,7 @@
       "id": 1,
       "url": "../images/car1.jpg",
       "description": "car",
-      "fav": false
+      "fav": true
     },
     {
       "id": 2,
@@ -16,13 +16,13 @@
       "id": 3,
       "url": "../images/dog1.jpg",
       "description": "dog",
-      "fav": false
+      "fav": true
     },
     {
       "id": 4,
       "url": "../images/guitar4.jpg",
       "description": "guitar",
-      "fav": false
+      "fav": true
     },
     {
       "id": 5,
@@ -34,7 +34,7 @@
       "id": 6,
       "url": "../images/dog2.jpg",
       "description": "dog",
-      "fav": false
+      "fav": true
     },
     {
       "id": 7,
