@@ -21,7 +21,7 @@ function App() {
             <Route exact path="/Favorites">
               <Favorites />
             </Route>
-            <Route exact path="Upload">
+            <Route exact path="/Upload">
               <Upload />
             </Route>
           </Switch>
