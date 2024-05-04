@@ -141,7 +141,7 @@
     {
       "url": "blob:http://localhost:3000/0b831777-70a4-470b-9bf9-71f735188ac7",
       "description": "dog",
-      "fav": true,
+      "fav": false,
       "id": 24
     },
     {
