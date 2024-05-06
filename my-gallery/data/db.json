@@ -22,7 +22,7 @@
       "id": 4,
       "url": "../images/guitar4.jpg",
       "description": "guitar",
-      "fav": true
+      "fav": false
     },
     {
       "id": 5,
@@ -153,7 +153,7 @@
     {
       "url": "blob:http://localhost:3000/d5fe302d-9dc7-4642-a05d-c905b055b27c",
       "description": "cat",
-      "fav": false,
+      "fav": true,
       "id": 26
     },
     {
