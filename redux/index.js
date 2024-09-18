@@ -3,6 +3,8 @@ const redux = require("redux");
 
 //let us create a store to carry our current state
 const createStore = redux.createStore;
+//bind action creators
+const bindActionCreators = redux.bindActionCreators;
 
 //actions
 const BUY_CAKE = "BUY_CAKE";
@@ -54,15 +56,23 @@ console.log("current state ------", store.getState());
 const unsubscribe = store.subscribe(() =>
   console.log("update state ------", store.getState())
 );
-store.dispatch(order_cake(3));
-store.dispatch(order_cake(4));
-store.dispatch(order_cake(2));
+// store.dispatch(order_cake(3));
+// store.dispatch(order_cake(4));
+// store.dispatch(order_cake(2));
+
+//use bind action creators instead
+const actions = bindActionCreators({ order_cake, restockCake }, store.dispatch);
+
+actions.order_cake(3);
+actions.order_cake(9);
+actions.order_cake(2);
 
 //restock cake
 console.log("------------------restock-----------------");
-const numRestock = 5;
+const numRestock = 10;
 console.log("current stock ", store.getState());
 console.log("Restock: ", numRestock);
-store.dispatch(restockCake(numRestock));
+// store.dispatch(restockCake(numRestock));
+actions.restockCake(numRestock);
 
 unsubscribe();
