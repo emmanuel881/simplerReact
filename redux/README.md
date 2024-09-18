@@ -42,3 +42,12 @@ store.dispatch(order_cake());
 - We can unsubscribe and stop listenning any changes made will nolonger be rendered
 
 `unsubscribe();`
+
+## major steps in react store
+
+1. Create store
+2. Define initial state and reducer
+3. Define action and action creators
+4. Subscibe to the store
+5. Dispatch action
+6. Unsubscribe
