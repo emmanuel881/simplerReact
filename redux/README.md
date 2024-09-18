@@ -43,7 +43,7 @@ store.dispatch(order_cake());
 
 `unsubscribe();`
 
-## major steps in react store
+## major steps in redux store
 
 1. Create store
 2. Define initial state and reducer
