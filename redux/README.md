@@ -11,17 +11,26 @@ The 3 main consepts in react are
 ## Responsibilities of store
 
 - hold the app state._form the index.js file_
-  `const store = createStore(reducer);`
+
+`const store = createStore(reducer);`
+
 - Allow access to state via `getState()`
   from index.js file
-  `console.log("current state ------", store.getState());`
+
+`console.log("current state ------", store.getState());`
+
 - Request listners using `subscribe()`
-  `const unsubscribe = store.subscribe(() =>`
-  `console.log("update state ------", store.getState()));`
-  on subscibing we can listen to changes based on cases
+
+`const unsubscribe = store.subscribe(() =>`
+`console.log("update state ------", store.getState()));`
+
+- on subscibing we can listen to changes based on cases
 - Allow state to be dispatched.
-  `store.dispatch(order_cake());`
-  `store.dispatch(order_cake());`
-  `store.dispatch(order_cake());`
+
+`store.dispatch(order_cake());`
+`store.dispatch(order_cake());`
+`store.dispatch(order_cake());`
+
 - We can unsubscribe and stop listenning any changes made will nolonger be rendered
-  `unsubscribe();`
+
+`unsubscribe();`
