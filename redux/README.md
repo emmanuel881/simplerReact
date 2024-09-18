@@ -51,3 +51,16 @@ store.dispatch(order_cake());
 4. Subscibe to the store
 5. Dispatch action
 6. Unsubscribe
+
+## Middleware in redux
+
+its a way to extend redux with custom functionalities
+
+it provides 3rd party extension point between dispatch an acton, and moment
+it reaches the reducer
+
+its used for logging, crash reporting, perform asynchronous tasks etc
+
+run
+
+`npm install logger`
