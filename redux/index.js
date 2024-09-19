@@ -1,6 +1,14 @@
 //import redux
 const redux = require("redux");
 
+//including a middleware
+const applyMiddleware = redux.applyMiddleware;
+
+//middleware
+//import middleware
+const reduxLogger = require("redux-logger");
+const logger = reduxLogger.createLogger();
+
 //let us create a store to carry our current state
 const createStore = redux.createStore;
 //bind action creators
@@ -94,14 +102,14 @@ const rootReducer = redux.combineReducers({
   iceCream: IceCreamReducer,
 });
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(logger));
 
 //display current state
 console.log("current state ------", store.getState());
 
-const unsubscribe = store.subscribe(() =>
-  console.log("update state ------", store.getState())
-);
+const unsubscribe = store.subscribe(() => {
+  // console.log("update state ------", store.getState())
+});
 // store.dispatch(order_cake(3));
 // store.dispatch(order_cake(4));
 // store.dispatch(order_cake(2));
