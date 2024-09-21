@@ -64,3 +64,11 @@ its used for logging, crash reporting, perform asynchronous tasks etc
 run
 
 `npm install logger`
+
+## asynchronous action creators
+
+we need to install packages eg
+
+- axios: used to send a get request to an api end point
+
+- redux-thunk:its a middleware used in defining async action creators
