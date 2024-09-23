@@ -16,10 +16,6 @@ const unsubscribe = store.subscribe(() => {});
 store.dispatch(cakeActions.ordered(6));
 store.dispatch(cakeActions.restocked(16));
 store.dispatch(iceActions.ordered(10));
-store.dispatch(iceActions.ordered(15));
-store.dispatch(cakeActions.ordered(10));
-store.dispatch(cakeActions.restocked(5));
-store.dispatch(iceActions.ordered(4));
-store.dispatch(iceActions.ordered(2));
+store.dispatch(iceActions.restocked(15));
 
 unsubscribe();
