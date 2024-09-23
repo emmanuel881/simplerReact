@@ -37,7 +37,8 @@ createAsyncThunk("user/fetchUsers", asyncFunction):
 - The first argument, **"user/fetchUsers"**, is the action type.
 - The second argument is an asynchronous function that makes a network request to fetch users.
 - **axios.get** makes an HTTP request to the API **https://jsonplaceholder.typicode.com/users**.
-- **.then(response)** processes the response data by extracting the **id** of each user (as an example).
+- **.then(response)** processes the response data by extracting the **_id_** of each user (as an example).
+- When you make an HTTP request using **_axios.get()_**, it returns a response object.
 
 This function generates three action types:
 
