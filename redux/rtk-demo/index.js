@@ -10,14 +10,16 @@ const iceActions = require("./features/icecream/iceCreamSlice").iceCreamActions;
 console.log("initial state :", store.getState());
 
 //lets subscribe
-const unsubscribe = store.subscribe(() => {
-  console.log("Updated state :", store.getState());
-});
+const unsubscribe = store.subscribe(() => {});
 
 //lets dispatch
 store.dispatch(cakeActions.ordered(6));
 store.dispatch(cakeActions.restocked(16));
 store.dispatch(iceActions.ordered(10));
 store.dispatch(iceActions.ordered(15));
+store.dispatch(cakeActions.ordered(10));
+store.dispatch(cakeActions.restocked(5));
+store.dispatch(iceActions.ordered(4));
+store.dispatch(iceActions.ordered(2));
 
 unsubscribe();
