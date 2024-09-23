@@ -4,7 +4,7 @@ const store = require("./app/store");
 //importing cake actions
 const cakeActions = require("./features/cake/cakeSlice").cakeActions;
 //import ice actions
-const iceActions = require("./features/icecream/iceCream").iceCreamActions;
+const iceActions = require("./features/icecream/iceCreamSlice").iceCreamActions;
 
 //lets log our current state
 console.log("initial state :", store.getState());

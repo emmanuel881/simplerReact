@@ -1,7 +1,7 @@
 const configureStore = require("@reduxjs/toolkit").configureStore;
 //import reducer
 const CakeReducer = require("../features/cake/cakeSlice");
-const icecreamReducer = require("../features/icecream/iceCream");
+const icecreamReducer = require("../features/icecream/iceCreamSlice");
 
 //similar to creating rootReducer in our previous redux expo
 const store = configureStore({
