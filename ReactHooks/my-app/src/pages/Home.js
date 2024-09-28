@@ -1,11 +1,12 @@
 import React from "react";
 import Counter from "../components/Counter";
 import Calculator from "../components/Calculator";
+import MyGallery from "../components/MyGallery";
 
 const Home = () => {
   return (
     <div>
-      <h1>Lets learn Hooks</h1>
+      <h1>Hooks micro project</h1>
       <Counter />
       <br />
       <br />
@@ -13,6 +14,13 @@ const Home = () => {
       <br />
       <br />
       <Calculator />
+      <br />
+      <br />
+
+      <br />
+      <br />
+
+      <MyGallery />
     </div>
   );
 };
