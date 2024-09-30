@@ -14,6 +14,9 @@ import FAQ from "./pages/help/FAQ";
 import Contact from "./pages/help/Contact";
 import NotFound from "./pages/NotFound";
 import Career, { careersLoader } from "./pages/careers/Career";
+import CareerDetails, {
+  CareerDetailsLoader,
+} from "./pages/careers/CareerDetails";
 
 // Import layouts
 import RootLayout from "./layouts/RootLayout";
@@ -34,12 +37,17 @@ const router = createBrowserRouter(
           <Route path="faq" element={<FAQ />} />
           <Route path="contact" element={<Contact />} />
         </Route>
-        <Route path="*" element={<NotFound />} />
 
         {/* career routes*/}
         <Route path="careers" element={<CareersLayout />}>
           <Route index element={<Career />} loader={careersLoader} />
+          <Route
+            path=":id"
+            element={<CareerDetails />}
+            loader={CareerDetailsLoader}
+          />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Route>
 
       {/* Admin routes that doesn't have the navBar component*/}
