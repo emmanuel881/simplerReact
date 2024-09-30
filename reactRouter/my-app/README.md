@@ -56,3 +56,14 @@ import { Outlet } from "react-router-dom";
 ```
 
 **Outlet**: This is a special component provided by react-router-dom. It serves as a placeholder for rendering the matching child route’s element. So, when a user navigates to /about, the AboutUs component will be rendered where `js<Outlet />` is.
+
+## JSON_server
+
+I am using a JSON-server to load my files from my db file
+We have to install it to use it. We use the command
+
+`npm install json-server`
+
+we can use it by running the command
+
+`json-server -p  PORT_NUMBER -w PATH`
