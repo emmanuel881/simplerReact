@@ -48,13 +48,10 @@ export const CareerDetailsLoader = async ({ params }) => {
     const res = await fetch(`http://localhost:4000/careers/${id}`);
 
     if (!res.ok) {
-      throw new Error(
-        `Failed to fetch career details: ${res.status} ${res.statusText}`
-      );
+      throw Error("cannot find career");
     }
     return res.json();
   } catch (error) {
-    // Return an error object to display in the component
-    return { mess: error };
+    throw new Error(error.message || "Failed to fetch career details");
   }
 };

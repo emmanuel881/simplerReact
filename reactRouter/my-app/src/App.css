@@ -1,14 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 :root {
-  --primary: #bc4123;
-  --secondary: #2b3452;
+  --primary: red;
+  --secondary: #fff;
 }
 body {
   margin: 0;
   padding: 20px;
   font-family: "Poppins";
-  background: var(--secondary);
+  /* background: var(--secondary); */
+  background-image: url("./images/backgound.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
 * {
   color: #fff;
@@ -120,7 +126,7 @@ form label span {
 }
 .careers > a p:last-child {
   font-size: 0.8em;
-  color: #bbb;
+  color: #333;
 }
 
 /* careers details */
@@ -129,6 +135,19 @@ form label span {
   padding: 20px;
   border-radius: 4px;
   margin: 20px 0;
+}
+
+/* page buttons */
+.pagination {
+  display: flex;
+  justify-content: center;
+  /* background-color: #fff; */
+}
+.pagination button {
+  padding: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-weight: 600;
 }
 
 /* breadcrumbs */

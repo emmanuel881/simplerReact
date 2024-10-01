@@ -17,6 +17,7 @@ import Career, { careersLoader } from "./pages/careers/Career";
 import CareerDetails, {
   CareerDetailsLoader,
 } from "./pages/careers/CareerDetails";
+import CareersError from "./components/CareersError";
 
 // Import layouts
 import RootLayout from "./layouts/RootLayout";
@@ -45,6 +46,7 @@ const router = createBrowserRouter(
             path=":id"
             element={<CareerDetails />}
             loader={CareerDetailsLoader}
+            errorElement={<CareersError />}
           />
         </Route>
         <Route path="*" element={<NotFound />} />
