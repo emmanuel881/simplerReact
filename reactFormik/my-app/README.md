@@ -14,3 +14,50 @@ this properties would hel us to
 - manage form state
 - handling form submition
 - validation and error messeges
+
+# here is an example
+
+```js
+const formik = useFormik({
+  initialValues: {
+    name: "",
+    email: "",
+    channel: "",
+  },
+});
+```
+
+the initialValues properties should match the name property in the form field
+
+```jsx
+<div>
+  <form>
+    <label htmlFor="">Name</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      onChange={formik.handleChange}
+      value={formik.values.name}
+    />
+    <label htmlFor="">Email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      onChange={formik.handleChange}
+      value={formik.values.email}
+    />
+    <label htmlFor="">Channel</label>
+    <input
+      type="text"
+      id="channel"
+      name="channel"
+      onChange={formik.handleChange}
+      value={formik.values.channel}
+    />
+
+    <button>Submit</button>
+  </form>
+</div>
+```
