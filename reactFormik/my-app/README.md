@@ -61,3 +61,21 @@ the initialValues properties should match the name property in the form field
   </form>
 </div>
 ```
+
+## Yup
+
+install usning the command
+
+`npm install yup`
+
+we start by createing a validation schema
+
+```js
+const validationSchema = Yup.object({
+  name: Yup.string().required("field required"),
+  email: Yup.string().email("Invalid email format").required("Required"),
+  channel: Yup.string().required("field required"),
+});
+```
+
+we create an object that contains rules for each form field
