@@ -63,9 +63,7 @@ const YoutubeForm = () => {
             type="text"
             id="name"
             name="name"
-            onChange={formik.handleChange}
-            value={formik.values.name}
-            onBlur={formik.handleBlur} //keep track of active fields
+            {...formik.getFieldProps("name")}
           />
           <div className="error">
             {formik.touched.name && formik.errors.name ? (
@@ -79,9 +77,7 @@ const YoutubeForm = () => {
             type="email"
             id="email"
             name="email"
-            onChange={formik.handleChange}
-            value={formik.values.email}
-            onBlur={formik.handleBlur}
+            {...formik.getFieldProps("email")}
           />
           <div className="error">
             {formik.touched.email && formik.errors.email ? (
@@ -95,9 +91,7 @@ const YoutubeForm = () => {
             type="text"
             id="channel"
             name="channel"
-            onChange={formik.handleChange}
-            value={formik.values.channel}
-            onBlur={formik.handleBlur}
+            {...formik.getFieldProps("channel")}
           />
           <div className="error">
             {formik.touched.channel && formik.errors.channel ? (

@@ -79,3 +79,89 @@ const validationSchema = Yup.object({
 ```
 
 we create an object that contains rules for each form field
+
+## using boilerplate
+
+in a case like this
+
+```jsx
+<div className="form-control">
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            onChange={formik.handleChange}
+            value={formik.values.name}
+            onBlur={formik.handleBlur} //keep track of active fields
+          />
+          <div className="error">
+            {formik.touched.name && formik.errors.name ? (
+              <div>{formik.errors.name}</div>
+            ) : null}
+          </div>
+        </div>
+        <div className="form-control">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            onChange={formik.handleChange}
+            value={formik.values.email}
+            onBlur={formik.handleBlur}
+          />
+          <div className="error">
+            {formik.touched.email && formik.errors.email ? (
+              <div>{formik.errors.email}</div>
+            ) : null}
+          </div>
+        </div>
+        <div className="form-control">
+          <label htmlFor="channel">Channel</label>
+          <input
+            type="text"
+            id="channel"
+            name="channel"
+            onChange={formik.handleChange}
+            value={formik.values.channel}
+            onBlur={formik.handleBlur}
+          />
+          <div className="error">
+            {formik.touched.channel && formik.errors.channel ? (
+              <div>{formik.errors.channel}</div>
+            ) : null}
+          </div>
+        </div>
+
+```
+
+we see that this parts are repeating for iput fields
+
+```jsx
+onChange={formik.handleChange}
+value={formik.values.channel}
+onBlur={formik.handleBlur}
+```
+
+we can shorten this ,
+
+````jsx
+<div className="form-control">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            onChange={formik.handleChange}
+            value={formik.values.email}
+            onBlur={formik.handleBlur}
+          />
+          <div className="error">
+            {formik.touched.email && formik.errors.email ? (
+              <div>{formik.errors.email}</div>
+            ) : null}
+          </div>
+        </div>
+        ```
+````
