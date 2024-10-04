@@ -146,22 +146,19 @@ onBlur={formik.handleBlur}
 
 we can shorten this ,
 
-````jsx
+```jsx
 <div className="form-control">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            onChange={formik.handleChange}
-            value={formik.values.email}
-            onBlur={formik.handleBlur}
-          />
-          <div className="error">
-            {formik.touched.email && formik.errors.email ? (
-              <div>{formik.errors.email}</div>
-            ) : null}
-          </div>
-        </div>
-        ```
-````
+  <label htmlFor="email">Email</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    {...formik.getFieldProps("email")}
+  />
+  <div className="error">
+    {formik.touched.email && formik.errors.email ? (
+      <div>{formik.errors.email}</div>
+    ) : null}
+  </div>
+</div>
+```
