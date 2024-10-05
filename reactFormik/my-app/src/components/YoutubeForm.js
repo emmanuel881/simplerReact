@@ -20,6 +20,7 @@ const initialValues = {
     facebook: "",
     X: "",
   },
+  phoneNumber: ["", ""],
 };
 const onSubmit = (values) => {
   console.log("formik values", values);
@@ -93,6 +94,16 @@ const YoutubeForm = () => {
         <div className="form-control">
           <label htmlFor="X">X</label>
           <Field type="text" id="X" name="socials.X" placeholder="paste link" />
+        </div>
+
+        <div className="form-control">
+          <label htmlFor="primaryNumber">Primary phone Number</label>
+          <Field type="text" id="primaryNumber" name="phoneNumber[0]" />
+        </div>
+
+        <div className="form-control">
+          <label htmlFor="SecondaryNumber">Secondary phone Number</label>
+          <Field type="text" id="SecondaryNumber" name="phoneNumber[1]" />
         </div>
 
         <button type="submit">Submit</button>
