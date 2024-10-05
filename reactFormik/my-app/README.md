@@ -162,3 +162,58 @@ we can shorten this ,
   </div>
 </div>
 ```
+
+## Formik Components
+
+they include
+
+- Formik
+- Form
+- Field
+- ErrorMessage
+
+# Formik
+
+steps include
+
+- import Formik
+
+`js import { Formik } from "formik";`
+
+- wrap the form with Formik tags
+- pass in the initialValues, validationSchema and onSubmit to the Formik
+-
+
+# Form
+
+import Form
+
+`js import { Form } from "formik"; `
+
+replace the form tag with Form
+
+delete the onSubmit event handler
+
+Form automatically ties or form to Formlik
+
+# Field
+
+import Field
+
+`js import {Field} from "formik";`
+
+replace all input tags with Field
+
+next get rid of all the field props helper method from each field
+
+`js {...formik.getFieldProps("email")}`
+
+Fields hook up inputs to the top level component
+
+it use name attribute to match-up form state
+
+## Handling errors
+
+# ErrorMessage
+
+we first neet to import it

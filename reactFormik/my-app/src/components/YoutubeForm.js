@@ -1,4 +1,4 @@
-import { useFormik } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import React from "react";
 import * as Yup from "yup";
 
@@ -19,90 +19,41 @@ const onSubmit = (values) => {
   // formik.resetForm(); // Reset form after submit
 };
 
-//validate input
-// const validate = (values) => {
-//   //this function should return an object
-//   let errors = {};
-
-//   //lets check if any of the inputs are empty
-//   if (!values.name) {
-//     errors.name = "name required";
-//   }
-
-//   if (!values.email) {
-//     errors.email = "email required";
-//   } else if (
-//     !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(values.email)
-//   ) {
-//     errors.email = "Enter a valid email";
-//   }
-
-//   if (!values.channel) {
-//     errors.channel = "channel title required";
-//   }
-
-//   return errors;
-// };
 const YoutubeForm = () => {
-  const formik = useFormik({
-    initialValues,
-    onSubmit,
-
-    ///formvalidation
-    //validateSch,
-    validationSchema,
-  });
   //console.log("formik Error:  ", formik.errors);
-  console.log("Visited fields: ", formik.touched); //touched stores the visited links
+  //console.log("Visited fields: ", formik.touched); //touched stores the visited links
   return (
-    <div>
-      <form onSubmit={formik.handleSubmit}>
+    <Formik
+      initialValues={initialValues}
+      onSubmit={onSubmit}
+      validationSchema={validationSchema}
+    >
+      <Form>
         <div className="form-control">
           <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            {...formik.getFieldProps("name")}
-          />
+          <Field type="text" id="name" name="name" />
           <div className="error">
-            {formik.touched.name && formik.errors.name ? (
-              <div>{formik.errors.name}</div>
-            ) : null}
+            <ErrorMessage name="name" />
           </div>
         </div>
         <div className="form-control">
           <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            {...formik.getFieldProps("email")}
-          />
+          <Field type="email" id="email" name="email" />
           <div className="error">
-            {formik.touched.email && formik.errors.email ? (
-              <div>{formik.errors.email}</div>
-            ) : null}
+            <ErrorMessage name="email" />
           </div>
         </div>
         <div className="form-control">
           <label htmlFor="channel">Channel</label>
-          <input
-            type="text"
-            id="channel"
-            name="channel"
-            {...formik.getFieldProps("channel")}
-          />
+          <Field type="text" id="channel" name="channel" />
           <div className="error">
-            {formik.touched.channel && formik.errors.channel ? (
-              <div>{formik.errors.channel}</div>
-            ) : null}
+            <ErrorMessage name="channel" />
           </div>
         </div>
 
         <button type="submit">Submit</button>
-      </form>
-    </div>
+      </Form>
+    </Formik>
   );
 };
 
