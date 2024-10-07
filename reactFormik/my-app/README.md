@@ -217,3 +217,32 @@ it use name attribute to match-up form state
 # ErrorMessage
 
 we first neet to import it
+
+## FieldArray component
+
+help create dynamic forms
+
+## FastField component
+
+its an optimized version of Field
+
+## validation
+
+validate runs onBlur, onChange and submit actions occur
+
+we can add this properties to the Formik element if
+
+```js
+<Formik
+      initialValues={initialValues}
+      onSubmit={onSubmit}
+      validationSchema={validationSchema}
+      validateOnChange={false}
+      validateOnBlur={false}
+    >
+
+```
+
+in this case `js validateOnChange={false}` disable on validation when keying in values
+
+in this case `js validateOnBlur={false}` disable it when user unclick a container
