@@ -7,11 +7,13 @@ function FormikContainer() {
   //initial values
   const initialValues = {
     email: "",
+    description: "",
   };
 
   // my validation schema
   const validationSchema = Yup.object({
     email: Yup.string().email("Invalid email format").required("Required"),
+    description: Yup.string().required("Required"),
   });
 
   // onSubmit function
@@ -34,6 +36,12 @@ function FormikContainer() {
             type="email"
             label="Email"
             name="email"
+          />
+          <FormikControl
+            control="textarea"
+            type="textarea"
+            label="Description"
+            name="description"
           />
           <button type="submit">Submit</button>
         </Form>
