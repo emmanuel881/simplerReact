@@ -14,10 +14,16 @@ function FormikContainer() {
   ];
 
   const radioOptions = [
-    { key: "option 1", value: "cat" },
-    { key: "option 2", value: "dog" },
-    { key: "option 3", value: "cow" },
-    { key: "option 4", value: "goat" },
+    { key: "cat", value: "cat" },
+    { key: "dog", value: "dog" },
+    { key: "cow", value: "cow" },
+    { key: "goat", value: "goat" },
+  ];
+  const checkboxOptions = [
+    { key: "Pizza", value: "pizza" },
+    { key: "Bread 2", value: "bread" },
+    { key: "Milk", value: "milk" },
+    { key: "Pie", value: "pie" },
   ];
   //initial values
   const initialValues = {
@@ -25,6 +31,7 @@ function FormikContainer() {
     description: "",
     selectOption: "",
     radioOption: "",
+    checkboxOption: [],
   };
 
   // my validation schema
@@ -33,6 +40,7 @@ function FormikContainer() {
     description: Yup.string().required("Required"),
     selectOption: Yup.string().required("Required"),
     radioOption: Yup.string().required("Required"),
+    checkboxOption: Yup.array().min(2, "select atleast 2").required("Required"),
   });
 
   // onSubmit function
@@ -73,6 +81,12 @@ function FormikContainer() {
             label="Choose animal"
             name="radioOption"
             options={radioOptions}
+          />
+          <FormikControl
+            control="checkbox"
+            label="Pick fav meal(atleast 2)"
+            name="checkboxOption"
+            options={checkboxOptions}
           />
           <button type="submit">Submit</button>
         </Form>
