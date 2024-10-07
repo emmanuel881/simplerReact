@@ -32,6 +32,7 @@ function FormikContainer() {
     selectOption: "",
     radioOption: "",
     checkboxOption: [],
+    birthDate: null,
   };
 
   // my validation schema
@@ -41,6 +42,7 @@ function FormikContainer() {
     selectOption: Yup.string().required("Required"),
     radioOption: Yup.string().required("Required"),
     checkboxOption: Yup.array().min(2, "select atleast 2").required("Required"),
+    birthDate: Yup.date().required("Required").nullable(),
   });
 
   // onSubmit function
@@ -88,6 +90,7 @@ function FormikContainer() {
             name="checkboxOption"
             options={checkboxOptions}
           />
+          <FormikControl control="date" label="pick a date" name="birthDate" />
           <button type="submit">Submit</button>
         </Form>
       )}
