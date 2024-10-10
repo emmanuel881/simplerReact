@@ -8,7 +8,9 @@ we then import **QueryClientProvider** and **QueryClient** from **_react-query_*
 
 we then wrap our root app component with
 
-`js<QueryClientProvider></QueryClientProvider>`
+`js
+<QueryClientProvider></QueryClientProvider>
+`
 
 create an instance of QueryClient
 
@@ -34,9 +36,11 @@ enables the refetch to occur even when window is not on focus.
 ## Allow fetch only when user clicks
 
 we do this by adding
+
 `js
  enabled: false
  `
+
 to the third object argument of the useQuery() function
 
 **useQuery** has function named _refetch_ ,... we can enable the fetch action by passing the refetch function on to onClick event handler eg
