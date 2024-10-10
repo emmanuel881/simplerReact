@@ -13,7 +13,7 @@ const ClientDetails = () => {
 
   const successFetch = (data) => {
     console.log("Fetch successful");
-    console.log(data);
+    // console.log(data);
   };
   const failFetch = (error) => {
     console.log("Fetch failed", error);
@@ -40,7 +40,31 @@ const ClientDetails = () => {
   return (
     <div>
       <h1>Info</h1>
-      <h3>Detailes about {data.name}</h3>
+      <h3>
+        Detailes about {data.name} {data.lastName}
+      </h3>
+      <div className="clientEmail">
+        <small>@{data.email}</small>
+      </div>
+      <div className="clientInfo">
+        <div className="clientDetails">
+          <span>gender</span>
+          <span> - </span>
+          <span>{data.gender}</span>
+        </div>
+        <div className="clientDetails">
+          <span> Dream Car</span>
+          <span> - </span>
+          <span>
+            {data.carCompany} {data.DreamCar}
+          </span>
+        </div>
+        <div className="clientDetails">
+          <span> Year of manufacture</span>
+          <span> - </span>
+          <span>{data.modelYear}</span>
+        </div>
+      </div>
     </div>
   );
 };
