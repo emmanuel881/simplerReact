@@ -14,9 +14,9 @@ create an instance of QueryClient
 
 ## DevTools
 
-install the dev tools
+access the dev tools
 
-`npm install @tanstack/react-query-devtools`
+`js import { ReactQueryDevtools } from "react-query/devtools";`
 
 # polling
 
