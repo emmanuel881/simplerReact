@@ -1,15 +1,25 @@
 import React, { useState } from "react";
-import { useQuery } from "react-query";
-import axios from "axios";
+
+import { useClienHook } from "../Hooks/useClientHook";
 
 const RQClients = () => {
   const [currentPage, setCurrentPage] = useState(1); // Pagination state
   const itemPerPage = 6;
 
+  //when it succeds
+  const successMesg = () => {
+    console.log("success");
+  };
+  //when it fails
+  const errorWhenFetching = () => {
+    console.log("failed");
+  };
+
   // Fetch data with react-query
   // data is the payload
-  const { data, isLoading, error } = useQuery("RQClientQuery", () =>
-    axios.get("http://localhost:4000/Dreamcar").then((res) => res.data)
+  const { data, isLoading, error } = useClienHook(
+    successMesg,
+    errorWhenFetching
   );
 
   // Handle loading state
