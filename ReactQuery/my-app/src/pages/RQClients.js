@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import { useClienHook } from "../Hooks/useClientHook";
 
@@ -15,12 +16,20 @@ const RQClients = () => {
     console.log("failed");
   };
 
+  //const url
+  const url = "http://localhost:4000/Dreamcar";
+
+  //query identifier
+  const queryIdentifier = "RQClientQuery";
+
   // Fetch data with react-query
   // data is the payload
-  const { data, isLoading, error } = useClienHook(
-    successMesg,
-    errorWhenFetching
-  );
+  const { data, isLoading, error } = useClienHook({
+    onSuccess: successMesg,
+    onError: errorWhenFetching,
+    url: url,
+    queryIdentifier,
+  });
 
   // Handle loading state
   if (isLoading) {
@@ -69,7 +78,10 @@ const RQClients = () => {
       {currentItems.map((client) => (
         <div key={client.id}>
           <div className="clients">
-            <h3>{client.name}</h3>
+            <Link to={client.id}>
+              <h3>{client.name}</h3>
+              <small>@{client.email}</small>
+            </Link>
           </div>
         </div>
       ))}

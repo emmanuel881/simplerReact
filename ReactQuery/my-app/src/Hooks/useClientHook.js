@@ -1,9 +1,8 @@
 import axios from "axios";
 import { useQuery } from "react-query";
 
-const fetctData = () =>
-  axios.get("http://localhost:4000/Dreamcar").then((res) => res.data);
-
-export const useClienHook = (onSuccess, onError) => {
-  return useQuery("RQClientQuery", fetctData, { onSuccess, onError });
+export const useClienHook = (prop) => {
+  const { onSuccess, onError, url, queryIdentifier } = prop;
+  const fetchData = () => axios.get(url).then((res) => res.data);
+  return useQuery(queryIdentifier, fetchData, { onSuccess, onError });
 };
