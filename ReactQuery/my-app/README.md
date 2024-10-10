@@ -11,3 +11,9 @@ we then wrap our root app component with
 `js<QueryClientProvider></QueryClientProvider>`
 
 create an instance of QueryClient
+
+## DevTools
+
+install the dev tools
+
+`npm install @tanstack/react-query-devtools`
