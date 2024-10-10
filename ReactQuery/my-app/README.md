@@ -8,9 +8,9 @@ we then import **QueryClientProvider** and **QueryClient** from **_react-query_*
 
 we then wrap our root app component with
 
-`js
+```js
 <QueryClientProvider></QueryClientProvider>
-`
+```
 
 create an instance of QueryClient
 
@@ -18,28 +18,33 @@ create an instance of QueryClient
 
 access the dev tools
 
-`js
- import { ReactQueryDevtools } from "react-query/devtools";
- `
+```js
+import { ReactQueryDevtools } from "react-query/devtools";
+```
 
 # polling
 
 in a site eg prices that constantly change we can use
-`js refetchInterval: "time in milisecons"`
+
+```js
+refetchInterval: "time in milisecons";
+```
+
 that is passed as the third argument in useQuery() this will refreash data depending on time specified.
 
-`js
- refetchIntervalInBackground: "boolean value"
- `
+```js
+refetchIntervalInBackground: "boolean value";
+```
+
 enables the refetch to occur even when window is not on focus.
 
 ## Allow fetch only when user clicks
 
 we do this by adding
 
-`js
- enabled: false
- `
+```js
+enabled: false;
+```
 
 to the third object argument of the useQuery() function
 
