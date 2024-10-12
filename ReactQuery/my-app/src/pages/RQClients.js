@@ -5,7 +5,7 @@ import { useClienHook } from "../Hooks/useClientHook";
 
 const RQClients = () => {
   const [currentPage, setCurrentPage] = useState(1); // Pagination state
-  const itemPerPage = 6;
+  const itemPerPage = 4;
 
   //when it succeds
   const successMesg = () => {
