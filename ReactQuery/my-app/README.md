@@ -177,3 +177,36 @@ useQueries(
 ```
 
 ## Dependent Queries
+
+this occurs when you need to query something like grades for a student. You first need to find the id of the student then proceed and find grades,... thus making grade query dependent query as it relays on the id.
+
+here is an example of a usecase
+
+```js
+const fetchData = (users) => {
+  return axios.get("`localhost:4000/${users}`");
+};
+```
+
+use useQuery
+
+```js
+const { data: user } = useQuery(["user", users], () => fetchData(users));
+
+//get channel based on user id
+const channelId = user?.data.channelId;
+```
+
+my fetch channel function
+
+```js
+const fetchChannel = (channelId) => {
+  return axios.get("`localhost:4000/${channelId}`");
+};
+```
+
+```js
+useQuery(["course", channelID], () => fetchChannel(channelId), {
+  enable: !!channelId,
+});
+```
