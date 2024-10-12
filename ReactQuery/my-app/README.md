@@ -1,4 +1,6 @@
-![image]("./screenShort.png")
+### reactQuery
+
+![image](./public/screenShort.png)
 
 ### Run app
 
