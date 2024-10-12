@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useClienHook } from "../Hooks/useClientHook";
 
 const ClientDetails = () => {
@@ -64,6 +64,11 @@ const ClientDetails = () => {
           <span> - </span>
           <span>{data.modelYear}</span>
         </div>
+      </div>
+      <div className="back">
+        <Link to="/rqClients">
+          <button>Back</button>
+        </Link>
       </div>
     </div>
   );

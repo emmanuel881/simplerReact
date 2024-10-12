@@ -100,3 +100,9 @@ header nav a.active {
 .pagination button:hover {
   background-color: #e76311;
 }
+.back {
+  display: flex;
+  justify-content: end;
+  margin-right: 50px;
+  padding: 10px;
+}

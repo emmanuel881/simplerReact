@@ -113,3 +113,47 @@ const { data, isLoading, error } = useClienHook(successMesg, errorWhenFetching);
 ```
 
 **NB:** _remember to import it_
+
+## Dynamic Paralle queries
+
+this is when we have multiple inputs for the query eg **`localhost:4000/${arryOfDynamicValues}`** ,... for example you want to know details about 2 queries **that you selected** we can conduct dynamic parallel query.
+
+to do this we use **useQueries()** insteated of _useQuery_
+
+here are the steps
+
+1. import library
+
+   ```js
+   import { useQueries } from "react-query";
+   ```
+
+2. Call the hook
+
+   ```js
+   useQueries();
+   ```
+
+3. passing arguments
+
+lets say our fetch function looks like this
+
+```js
+const fetchData = (IDs) => {
+  return axios.get("`localhost:4000/${IDs}`");
+};
+```
+
+we pass the argmuments differently frm _useQuery_
+we map through the IDs since its an array
+
+```js
+useQueries(
+  IDs.map((id) => {
+    return {
+      queryKey: ["fetchData", id], //pass query key and an id
+      queryFn: () => fetchData(id), //the query function
+    };
+  })
+);
+```

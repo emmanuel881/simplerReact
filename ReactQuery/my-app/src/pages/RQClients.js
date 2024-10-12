@@ -20,7 +20,7 @@ const RQClients = () => {
   const url = "http://localhost:4000/Dreamcar";
 
   //query identifier
-  const queryIdentifier = "RQClientQuery";
+  const queryIdentifier = ["RQClientQuery", url];
 
   // Fetch data with react-query
   // data is the payload
