@@ -1,3 +1,17 @@
+### Run app
+
+for the frontend
+
+```
+npm start
+```
+
+for the API
+
+```
+npm run serve-json
+```
+
 ### React-Query
 
 we install it buy running the command
@@ -157,3 +171,5 @@ useQueries(
   })
 );
 ```
+
+## Dependent Queries
