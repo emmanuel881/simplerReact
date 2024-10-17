@@ -2,6 +2,7 @@ import React from "react";
 import Counter from "../components/Counter";
 import Calculator from "../components/Calculator";
 import MyGallery from "../components/MyGallery";
+import ChangName from "../components/ChangName";
 
 const Home = () => {
   return (
@@ -21,6 +22,12 @@ const Home = () => {
       <br />
 
       <MyGallery />
+      <br />
+      <br />
+
+      <br />
+      <br />
+      <ChangName />
     </div>
   );
 };

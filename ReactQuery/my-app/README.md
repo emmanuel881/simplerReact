@@ -207,6 +207,15 @@ const fetchChannel = (channelId) => {
 
 ```js
 useQuery(["course", channelID], () => fetchChannel(channelId), {
-  enable: !!channelId,
+  enable: !!channelId, //change to a boolean value
 });
 ```
+
+## infinate queries
+
+this enable us to give usx the funtionality like load more in our app to display more content
+we use **useInfinateQuery** from react-query to do this.
+
+## mutations
+
+useMutation()

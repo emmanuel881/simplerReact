@@ -15,7 +15,7 @@ const initialState = {
 
 // Actions
 const FETCH_USER_REQUEST = "FETCH_USER_REQUEST";
-const FETCH_USER_SUCCEEDED = "FETCH_USER_SUCCEEDED"; // Fix typo
+const FETCH_USER_SUCCEEDED = "FETCH_USER_SUCCEEDED"; // Typo fixed
 const FETCH_USER_FAILED = "FETCH_USER_FAILED";
 
 // Action creators

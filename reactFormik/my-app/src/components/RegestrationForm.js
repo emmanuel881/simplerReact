@@ -5,8 +5,8 @@ import FormikControl from "./FormikControl";
 
 function RegistrationForm() {
   const options = [
-    { key: "Email", value: "email" },
-    { key: "phone", value: "phone" },
+    { key: "Email", value: "emailmoc" },
+    { key: "Telephone", value: "telephonemoc" },
   ];
   const initialValues = {
     email: "",
@@ -24,9 +24,8 @@ function RegistrationForm() {
       .required("Required"),
     modeOfContact: Yup.string().required("Required"),
     phone: Yup.string().when("modeOfContact", {
-      is: "phone",
+      is: "telephonemoc",
       then: Yup.string().required("Required"),
-      otherwise: Yup.string().nullable(),
     }),
   });
 
