@@ -73,3 +73,7 @@ we can use it by running the command
 ## useLocation
 
 learnt it can be used to make breadcrumbs
+
+## <outlet />
+
+this acts as a placeholder for components 
